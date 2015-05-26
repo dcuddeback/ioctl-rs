@@ -1,0 +1,4 @@
+[package]
+name = "ioctl"
+version = "0.1.0"
+authors = ["David Cuddeback <david.cuddeback@gmail.com>"]
