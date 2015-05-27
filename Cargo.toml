@@ -6,6 +6,7 @@ description = "Rust bindings for system ioctls."
 license = "MIT"
 homepage = "https://github.com/dcuddeback/ioctl-rs"
 repository = "https://github.com/dcuddeback/ioctl-rs"
+readme = "README.md"
 keywords = ["ioctl"]
 exclude = ["ioctl_list/*"]
 
