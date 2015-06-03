@@ -24,7 +24,7 @@ pub fn tiocexcl(fd: RawFd) -> io::Result<()> {
 }
 
 /// Disable exclusive mode.
-pub fn tiocnxlc(fd: RawFd) -> io::Result<()> {
+pub fn tiocnxcl(fd: RawFd) -> io::Result<()> {
     match unsafe { ioctl(fd, TIOCNXCL) } {
         0 => Ok(()),
         _ => Err(io::Error::last_os_error())
