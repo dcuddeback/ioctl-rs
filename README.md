@@ -39,6 +39,10 @@ This repository includes a C++ program called `ioctl_list`, which generates Rust
 ioctl constants. To contribute ioctl definitions for a new platform or to add new ioctl
 definitions, please follow the instructions in the `ioctl_list` [README](/ioctl_list/README.md).
 
+### Contributors
+
+* [dcuddeback](https://github.com/dcuddeback)
+* [trlim](https://github.com/trlim)
 
 ## License
 Copyright © 2015 David Cuddeback
