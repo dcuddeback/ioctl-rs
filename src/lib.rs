@@ -12,6 +12,9 @@ pub use os::linux::*;
 #[cfg(target_os = "macos")]
 pub use os::macos::*;
 
+#[cfg(target_os = "freebsd")]
+pub use os::bsd::*;
+
 mod os;
 
 
