@@ -11,4 +11,4 @@ keywords = ["ioctl"]
 exclude = ["ioctl_list/*"]
 
 [dependencies]
-libc = "0.1.8"
+libc = "0.2"
