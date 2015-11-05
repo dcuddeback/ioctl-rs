@@ -1,6 +1,6 @@
 [package]
 name = "ioctl-rs"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["David Cuddeback <david.cuddeback@gmail.com>"]
 description = "Rust bindings for system ioctls."
 license = "MIT"
