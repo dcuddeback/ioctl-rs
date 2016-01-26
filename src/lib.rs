@@ -13,7 +13,10 @@ pub use os::linux::*;
 pub use os::macos::*;
 
 #[cfg(target_os = "freebsd")]
-pub use os::bsd::*;
+pub use os::freebsd::*;
+
+#[cfg(target_os = "openbsd")]
+pub use os::openbsd::*;
 
 mod os;
 

@@ -5,4 +5,7 @@ pub mod linux;
 pub mod macos;
 
 #[cfg(target_os = "freebsd")]
-pub mod bsd;
+pub mod freebsd;
+
+#[cfg(target_os = "openbsd")]
+pub mod openbsd;
