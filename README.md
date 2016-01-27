@@ -12,7 +12,7 @@ Add `ioctl-rs` as a dependency in `Cargo.toml`:
 
 ```toml
 [dependencies]
-ioctl-rs = "0.1.3"
+ioctl-rs = "0.1"
 ```
 
 Import the `ioctl_rs` crate. You may also need `std::os::unix::io::RawFd` for file descriptors and
