@@ -15,6 +15,9 @@ pub use os::macos::*;
 #[cfg(target_os = "freebsd")]
 pub use os::freebsd::*;
 
+#[cfg(target_os = "dragonfly")]
+pub use os::dragonfly::*;
+
 #[cfg(target_os = "openbsd")]
 pub use os::openbsd::*;
 
