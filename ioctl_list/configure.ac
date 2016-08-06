@@ -25,7 +25,7 @@ AC_CHECK_HEADERS([net/if.h], [], [],
 # include <sys/socket.h>
 #endif
 ])
-
+AC_CHECK_HEADERS([net/route.h])
 AC_CHECK_HEADERS([termios.h])
 AC_CHECK_HEADERS([unistd.h])
 AC_CHECK_HEADERS([IOKit/serial/ioss.h])

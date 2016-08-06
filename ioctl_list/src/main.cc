@@ -17,6 +17,10 @@
 # include <net/if.h>
 #endif
 
+#ifdef HAVE_NET_ROUTE_H
+# include <net/route.h>
+#endif
+
 #ifdef HAVE_TERMIOS_H
 # include <termios.h>
 #endif
