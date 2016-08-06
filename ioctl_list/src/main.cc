@@ -15,6 +15,9 @@
 
 #ifdef HAVE_NET_IF_H
 # include <net/if.h>
+#ifdef __DragonFly__
+# include <net/route.h>
+#endif
 #endif
 
 #ifdef HAVE_TERMIOS_H

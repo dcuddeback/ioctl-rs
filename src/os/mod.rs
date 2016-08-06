@@ -7,5 +7,8 @@ pub mod macos;
 #[cfg(target_os = "freebsd")]
 pub mod freebsd;
 
+#[cfg(target_os = "dragonfly")]
+pub mod dragonfly;
+
 #[cfg(target_os = "openbsd")]
 pub mod openbsd;
