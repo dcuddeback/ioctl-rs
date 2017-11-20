@@ -43,6 +43,7 @@ definitions, please follow the instructions in the `ioctl_list` [README](/ioctl_
 
 * [dcuddeback](https://github.com/dcuddeback)
 * [trlim](https://github.com/trlim)
+* [mneumann](https://github.com/mneumann)
 
 ## License
 Copyright © 2015 David Cuddeback
