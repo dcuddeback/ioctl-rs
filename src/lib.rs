@@ -41,8 +41,8 @@ pub fn tiocnxcl(fd: RawFd) -> io::Result<()> {
 }
 
 /// Get the status of modem bits.
-pub fn tiocmget(fd: RawFd) -> io::Result<c_int> {
-    let mut bits: c_int = unsafe { mem::uninitialized() };
+pub fn tiocmget(fd: RawFd) -> io::Result<BitsInt> {
+    let mut bits: BitsInt = unsafe { mem::uninitialized() };
 
     match unsafe { ioctl(fd, TIOCMGET, &mut bits) } {
         0 => Ok(bits),
@@ -51,7 +51,7 @@ pub fn tiocmget(fd: RawFd) -> io::Result<c_int> {
 }
 
 /// Set the status of modem bits.
-pub fn tiocmset(fd: RawFd, bits: c_int) -> io::Result<()> {
+pub fn tiocmset(fd: RawFd, bits: BitsInt) -> io::Result<()> {
     match unsafe { ioctl(fd, TIOCMSET, &bits) } {
         0 => Ok(()),
         _ => Err(io::Error::last_os_error())
@@ -59,7 +59,7 @@ pub fn tiocmset(fd: RawFd, bits: c_int) -> io::Result<()> {
 }
 
 /// Set the indicated modem bits.
-pub fn tiocmbis(fd: RawFd, bits: c_int) -> io::Result<()> {
+pub fn tiocmbis(fd: RawFd, bits: BitsInt) -> io::Result<()> {
     match unsafe { ioctl(fd, TIOCMBIS, &bits) } {
         0 => Ok(()),
         _ => Err(io::Error::last_os_error())
@@ -67,9 +67,26 @@ pub fn tiocmbis(fd: RawFd, bits: c_int) -> io::Result<()> {
 }
 
 /// Clear the indicated modem bits.
-pub fn tiocmbic(fd: RawFd, bits: c_int) -> io::Result<()> {
+pub fn tiocmbic(fd: RawFd, bits: BitsInt) -> io::Result<()> {
     match unsafe { ioctl(fd, TIOCMBIC, &bits) } {
         0 => Ok(()),
         _ => Err(io::Error::last_os_error())
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// Will fail to compile if types don't match.
+    #[allow(dead_code)]
+    fn compile_bits() {
+        tiocmbic(0, TIOCM_RTS).unwrap();
+    }
+
+    #[allow(dead_code)]
+    fn compile_get_bits() {
+        let bits = tiocmget(0).unwrap();
+        tiocmset(0, bits).unwrap();
     }
 }
