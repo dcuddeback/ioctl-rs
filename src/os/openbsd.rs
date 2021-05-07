@@ -67,6 +67,8 @@ pub const TIOCM_RNG: c_int = 0x00000080;
 pub const TIOCM_RI: c_int = 0x00000080;
 pub const TIOCM_DSR: c_int = 0x00000100;
 
+pub type BitsInt = c_int;
+
 extern "C" {
     pub fn ioctl(fildes: c_int, request: c_ulong, ...) -> c_int;
 }
