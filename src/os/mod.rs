@@ -12,3 +12,6 @@ pub mod dragonfly;
 
 #[cfg(target_os = "openbsd")]
 pub mod openbsd;
+
+#[cfg(target_os = "netbsd")]
+pub mod netbsd;
