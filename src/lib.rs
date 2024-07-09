@@ -21,6 +21,9 @@ pub use os::dragonfly::*;
 #[cfg(target_os = "openbsd")]
 pub use os::openbsd::*;
 
+#[cfg(target_os = "aix")]
+pub use os::aix::*;
+
 mod os;
 
 
